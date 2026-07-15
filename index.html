@@ -576,18 +576,8 @@ function submitSurvey(){
     access_key: WEB3FORMS_ACCESS_KEY,
     subject: `Nueva respuesta — ${answers.nombre || 'Encuesta K-Beauty Room'}`,
     from_name: answers.nombre || "K-Beauty Room · Encuesta",
-    nombre: answers.nombre,
-    calificacion: answers.rating,
-    disfrute: answers.disfrute,
-    mejora: answers.mejora,
-    atencion: answers.atencion,
-    piel: answers.piel,
-    recomendacion: answers.recomendacion,
-    cambio: answers.cambio,
-    extra: answers.extra,
-    autorizacion: answers.autorizacion,
     fecha: new Date().toLocaleString('es-MX'),
-    resumen_completo: summaryLines
+    respuestas: summaryLines
   };
 
   fetch("https://api.web3forms.com/submit", {
